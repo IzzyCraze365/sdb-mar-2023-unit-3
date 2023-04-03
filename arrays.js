@@ -10,6 +10,7 @@ Arrays are objects that have characteristics
 -What makes arrays powerful is they are loopable
 */
 
+
 // ? How do we create an array
 // Arrays consist of an opening and closing of the square brackets ([])
 const names = ["George", "Tom", "Beth", "JoAnn"]; //<-- Prefered way of creating arrays
