@@ -4,12 +4,12 @@
 // Convert strings to arrays based of a space.
 let words = "I really have been enjoying this coding camp!";
 let wordArr = words.split(" ");
-console.log(wordArr);
+console.log(`Split ${wordArr}`);
 
 // Opposite of a Split is a Join
 //converts an array into a sentence
 let wordJoin = wordArr.join(" ");
-console.log(wordJoin);
+console.log(`Split ${wordJoin}`);
 
 // The push method adds an element to the ending of an array
 let studentNames = ["Trevor", "John"];
