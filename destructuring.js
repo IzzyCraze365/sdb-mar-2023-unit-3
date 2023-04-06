@@ -64,3 +64,51 @@ let student2 = {
   };
   let{ nameOfStudent: name4, age: age4 } = student2; // we are renamning "nameOfStudent" to be "name"
 console.log(name4, age4);  // prints "Luke 24"
+
+
+//Day 014
+// Needs Curly brackets lets you use deconstructors
+
+function printThings({ name, greeting }) {
+  console.log(`${greeting}, ${name}`);
+}
+
+printThings({ greeting: "Good Morning", name: "Billy" });
+
+class Room {
+  constructor({ name, description, doorLock, inventory }) {
+    this.name = name;
+    this.description = description;
+    this.inventory = inventory;
+  }
+
+  displayInventory() {
+    return `You have the following items in this room ` + this.inventory;
+  }
+}
+
+let foyer = new Room({
+  name: "foyer",
+  doorLock: false,
+  inventory: ["hammer", "note"],
+  description: "You have now enter foyer....",
+});
+
+let bedroom = new Room({
+  name: "bedroom",
+  doorLock: false,
+  inventory: ["pillow", "sheets"],
+  description: "You have now enter bedroom....",
+});
+
+let state = {
+  foyer: foyer,
+  bedroom: bedroom,
+};
+
+let currentState = "bedroom";
+
+console.log(state[currentState].displayInventory());
+// or you could enter it as
+// ! Avoid this
+// let foyer = new Room("foyer", "You have now enetered the foyer...", false, ["hammer", "note"])
