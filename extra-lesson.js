@@ -50,3 +50,53 @@ sarah.speak()
 
 
 sarah.speak("Hello from Sarah")
+
+
+//! Day 016
+//  Combining Arrays using spread.
+
+let x = [1, 2, 3];
+let y = [4, 5, 6];
+
+let combinedArray = [...x, ...y];
+
+console.log(combinedArray);
+
+let livingRoom = {
+  name: ["lr", "livingroom", "living room"],
+  possibleLocations: ["kitchen", "foyer"],
+};
+
+let kitchen = {
+  name: ["kitchen", "kit", "cooking room"],
+  possibleLocations: ["living room", "foyer"],
+};
+
+let foyer = {
+  nameVariations: ["foy", "foyer", "gathering place"],
+  possibleLocations: ["kitchen", "living room"],
+};
+
+let locations = {
+  "living room": livingRoom,
+  kitchen: kitchen,
+  foyer: foyer,
+};
+
+let currentLocation = "living room";
+let humanInput = "foys";
+let possibleOptionsToUpdateState = locations[currentLocation].possibleLocations;
+console.log(possibleOptionsToUpdateState);
+let acceptableNameVariations = [];
+
+possibleOptionsToUpdateState.forEach((properRoomName) => {
+  let x = locations[properRoomName];
+  acceptableNameVariations = [
+    ...acceptableNameVariations,
+    ...locations[properRoomName].name,
+  ];
+});
+console.clear();
+console.log(acceptableNameVariations);
+console.log(acceptableNameVariations.includes(humanInput));
+
