@@ -23,7 +23,7 @@ console.log(poppedStudents);
 studentNames.push("Simon");
 
 // .slice() returns selected elements in an array and returns a new array
-// you can giv eit a start and stop point or omit the stop point
+// you can give it a start and stop point or omit the stop point
 const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 const citrus = fruits.slice(1, 3); // Starts at position 1 ends at position 3
 console.log(fruits);
